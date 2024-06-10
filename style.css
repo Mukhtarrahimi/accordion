@@ -21,8 +21,16 @@
     align-items: center;
     justify-content: center;
     padding: 50px;
+    flex-direction: column;
   }
-  
+  .title{
+    font-family: 'vazir', sans-serif;
+    /* color: #3e3e3e; */
+    color: #007bff;
+    margin-bottom: 15px;
+
+    
+  }
   .acordion > div > span {
     background-color: #eee;
     width: 100%;
@@ -73,7 +81,6 @@
   .acordion > div > div {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    padding: 15px;
     /* display: none; */
     max-height: 0;
     overflow: hidden;
@@ -89,5 +96,7 @@
     padding: 15px;
     /* display: block; */
     max-height: 0;
+    padding: 15px;
+
   }
   
