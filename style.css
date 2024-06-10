@@ -6,3 +6,88 @@
     font-family: 'yekan';
     src: url(./assets/fonts/Yekan.woff);
 }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+  
+  .acordion > div > span {
+    background-color: #eee;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    padding: 15px 50px 15px 15px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    font-family: 'vazir', sans-serif;
+    color: #3e3e3e;
+    font-weight: bold;
+    
+
+  }
+  
+  .acordion > div:first-child > span {
+    border-radius: 10px 10px 0 0;
+  }
+  .acordion > div:last-child > span {
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+  }
+  .acordion > div.show:last-child > span {
+    border-radius: 0;
+  }
+  .acordion > div.show:last-child > div {
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .acordion > div > span:after {
+    content: "\002b";
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    right: 15px;
+    top: 7px;
+    color: #007bff;
+  }
+  .acordion > div.show > span::after {
+    content: "\2212";
+  }
+  .acordion > div > span:hover,
+  .acordion > div.show > span {
+    background-color: #ccc;
+  }
+  .acordion > div > div {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    font-family: 'yekan', sans-serif;
+    color: #646464;
+  }
+  .acordion > div > div >i{
+    color: #ccc;
+    margin-left: 5px;
+  }
+  .acordion > div.show > div {
+    padding: 15px;
+    /* display: block; */
+    max-height: 0;
+  }
+  
